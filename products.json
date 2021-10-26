@@ -1,0 +1,17 @@
+[
+    {
+        "id":"1",
+        "name":"Nithin",
+        "age": 26,
+        "salary":4.6,
+        "email":"nithin@cronj.com"
+    }, {
+        "id":"2",
+        "name":"Aditya",
+        "age": 25,
+        "salary":4.6,
+        "email":"aditya@cronj.com"
+    }
+    ]
+
+
