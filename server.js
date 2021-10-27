@@ -12,13 +12,14 @@ app.use(express.json())
 const port = 3000
 
 app.get('/', (req, res) => {
-  //res.send('Hello World!')
  res.send(JSON.stringify(produncts));
 })
+
+
 app.post("/addEmp", (req,res)=>
 {
 
-    console.log(req.body);
+    //console.log(req.body);
     const id = req.body.id;
     const name = req.body.name;
     const age = req.body.age;
@@ -31,20 +32,22 @@ app.post("/addEmp", (req,res)=>
     res.send({success:true})
 })
 
+
 app.get("/getEmp/:id", (req,res)=>{
     const id= req.param("id");
     console.log(id);
     client.get(id,(err,data)=>{
    
-console.log(data);
-    //console.log(req.param("id"));
-    res.send(JSON.parse(data))
+        console.log(data);
+        //console.log(req.param("id"));
+        res.send(JSON.parse(data))          
     
+        })
 })
-})
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+
+
+
+
 const admin = {name:"nithi",pass:"123"}
 
 app.post("/login", (req,res)=>{
@@ -59,5 +62,50 @@ else{
 }
 })
 
+app.delete("/deleteEmp/:id", (req, res) => {
+const id=req.param("id");
+client.get(id,(err, data)=>
+{
+    console.log(data);
+   // delete data(id)
+    res.send({success:true})
+    
+})
+
+}) 
+
+app.put("/editEmp/:id", (req, res) =>{
+    const id=req.param("id");
+    client.get(id,(err, data)=>
+    { 
+        console.log(data);
+       // delete data(id)
+        res.send({success:true})
+       
+        
+        
+    })
+
+})
 
 
+app.get("/getAll", (req,res)=>{
+    var id= req.body.id;
+    console.log(id);
+    do{
+    client.get(id,(err,data)=>{
+   
+        console.log(data);
+        //console.log(req.param("id"));
+        res.send(JSON.parse(data))          
+             
+        })
+    id++;
+} while(id!=null)
+})
+
+
+app.listen(port, () => {
+    console.log(`App listening at http://localhost:${port}`)
+  })
+  

@@ -1,0 +1,18 @@
+#div1 {
+	margin: auto;
+	color: black;
+	background-color: ghostwhite;
+	height: 50%;
+	width: 50%;
+	align-items: center;
+	text-align: center;
+	padding: 30px;
+	
+}
+body{
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+	color: white;
+}

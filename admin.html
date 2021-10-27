@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Admin Section</title>
+	<link rel="stylesheet" href="login.css" />
+	<script src="server.js"></script>
+
+</head>
+
+<body>
+	
+		<h1>Admin Section</h1>
+		<div></div>
+		<table>
+			<tr>
+				<th>
+					<form action="login.html">
+						<button type="submit" />Logout </button>
+					</form>
+				</th>
+				<th>
+					<form action="viewEmployee.html">
+						<button type="submit" />View Employees</button>
+					</form>
+				</th>
+			</tr>
+		</table>
+	</div>
+	<div id="div1">
+		<table style="width: 50%;">
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Salary</th>
+				<th>Email</th>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" placeholder="Enter name here" id="name" />
+				</td>
+				<td>
+					<input type="text" placeholder="ENter age here" id="age" />
+				</td>
+				<td>
+					<input type="text" placeholder="ENter Salary here" id="salary" />
+				</td>
+				<td>
+					<input type="text" placeholder="ENter Email here" id="email" />
+				</td>
+				<td>
+					<input type="button" value="Add Employee" onclick="addEmployee();" />
+				</td>
+				
+			</tr>
+		</table>
+		<!-- <ul id="emplist"></ul> -->
+	</div>
+	<script src="employee.js"></script>
+
+</body>
+
+</html>
