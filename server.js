@@ -8,6 +8,8 @@ client.on("error", function(error) {
     });
 
 const app = express()
+var cors = require("cors");
+app.use(cors());
 app.use(express.json())
 const port = 3000
 
@@ -18,7 +20,6 @@ app.get('/', (req, res) => {
 
 app.post("/addEmp", (req,res)=>
 {
-
     //console.log(req.body);
     const id = req.body.id;
     const name = req.body.name;
@@ -90,19 +91,12 @@ app.put("/editEmp/:id", (req, res) =>{
 
 
 app.get("/getAll", (req,res)=>{
-    var id= req.body.id;
-    console.log(id);
-    do{
-    client.get(id,(err,data)=>{
-   
-        console.log(data);
-        //console.log(req.param("id"));
-        res.send(JSON.parse(data))          
-             
-        })
-    id++;
-} while(id!=null)
-})
+	res.send([
+		{ id: 1, name: "nithi", age: 26,salary:20000,email:"nithin@cronj.com" },
+		{ id: 2, name: "adith", age: 23,salary:25000,email:"adit@cronj.com" },
+	]);
+});
+
 
 
 app.listen(port, () => {

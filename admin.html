@@ -33,12 +33,15 @@
 	<div id="div1">
 		<table style="width: 50%;">
 			<tr>
+				<th>id</th>
 				<th>Name</th>
 				<th>Age</th>
 				<th>Salary</th>
 				<th>Email</th>
 			</tr>
-			<tr>
+			<tr><td>
+				<input type="text" placeholder="Enter Id here" id="id" />
+			</td>
 				<td>
 					<input type="text" placeholder="Enter name here" id="name" />
 				</td>
@@ -52,14 +55,14 @@
 					<input type="text" placeholder="ENter Email here" id="email" />
 				</td>
 				<td>
-					<input type="button" value="Add Employee" onclick="addEmployee();" />
+					<input type="button" value="Add Employee" onclick="addEmp();" />
 				</td>
 				
 			</tr>
 		</table>
 		<!-- <ul id="emplist"></ul> -->
 	</div>
-	<script src="employee.js"></script>
+	<script src="./addEmp.js"></script>
 
 </body>
 
