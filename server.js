@@ -56,7 +56,9 @@ app.post("/login", (req,res)=>{
     const password = req.body.password;
 console.log(name,password);
 if(name == admin.name && password==admin.pass){
-res.send({success: true})
+
+    res.send({success: true})
+
 }
 else{
     res.send({success:false})

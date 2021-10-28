@@ -1,6 +1,6 @@
 
 function addEmp(){
-    const id=document.getElementById("id").value;
+const id=document.getElementById("id").value;
 const name=document.getElementById("name").value;
 const age=document.getElementById("age").value;
 const salary=document.getElementById("salary").value;
